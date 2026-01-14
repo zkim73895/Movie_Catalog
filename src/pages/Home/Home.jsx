@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getMovies } from "../../services/movieApi.js";
-
+import MovieCard from '../../components/MovieCard/MovieCard'
 
 const Home = () => {
     const [movie, setMovies] = useState([])
@@ -21,11 +21,11 @@ const Home = () => {
     <section className="home">
         <h2 className="home__title">Список фильмов</h2>
 
-        <ul className={"home_list"}>
+        <div className="home__grid">
             {movie.map(movie => (
-                <li key={movie.id}>{movie.title}</li>
+                <MovieCard key={movie.id} movie={movie} />
             ))}
-        </ul>
+        </div>
     </section>
   )
 }
