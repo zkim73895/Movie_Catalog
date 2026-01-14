@@ -32,4 +32,16 @@ body {
     padding: 12px;
     background-color: #eee;
   }
+
+  .home {
+    &__title {
+      margin-bottom: 16px;
+    }
+
+    &__list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+  }
 }
