@@ -10,7 +10,7 @@ body {
   font-family: Snell Roundhand, cursive;
   background-color: $bg-main;
   color: $text-main;
-  text-align: center;
+
   font-size: 30px;
   margin-top: 50px;
 }
@@ -36,11 +36,16 @@ body {
     padding: 12px;
     background-color: #eee;
   }
+
+  &_title {
+    text-align: center;
+  }
 }
 
 .home {
   &__title {
     margin-bottom: 50px;
+    text-align: center;
   }
 
   &__grid {
@@ -97,6 +102,11 @@ body {
     margin-bottom: 16px;
     color: $text-muted;
     text-decoration: none;
+    text-align: left;
+  }
+
+  &__back:hover {
+    color: $accent;
   }
 
   &__content {
@@ -121,6 +131,8 @@ body {
   &__description {
     margin-top: 12px;
     line-height: 1.5;
+    text-size-adjust: auto;
+    font-size: 20px;
   }
 }
 
