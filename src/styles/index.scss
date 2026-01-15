@@ -116,3 +116,16 @@ body {
     line-height: 1.5;
   }
 }
+
+.search {
+  margin-bottom: 16px;
+
+  &__input {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+}
