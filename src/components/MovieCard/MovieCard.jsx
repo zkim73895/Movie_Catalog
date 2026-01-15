@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { memo } from 'react'
 
 const MovieCard = ({ movie }) => {
     return (
@@ -19,4 +20,4 @@ const MovieCard = ({ movie }) => {
     )
 }
 
-export default MovieCard
+export default memo(MovieCard)

@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home/Home'
-import Movie from './pages/Movie/Movie'
+import { Suspense, lazy } from "react";
+
+const Movie = lazy(() => import('./pages/Movie/Movie'))
 
 const App = () => {
   return (
@@ -11,10 +13,12 @@ const App = () => {
             </header>
 
             <main className={"app_content"}>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/movie/:id" element={<Movie />} />
-                </Routes>
+                <Suspense fallback={<p>Загрузка страницы...</p>}>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/movie/:id" element={<Movie />} />
+                    </Routes>
+                </Suspense>
             </main>
 
             <footer className={"app_footer"}>
