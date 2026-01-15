@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getMovies } from "../../services/movieApi.js";
+import { getMovies } from "../../services/moviesApi.js";
 import MovieCard from '../../components/MovieCard/MovieCard'
 
 const Home = () => {

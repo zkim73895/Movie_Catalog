@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const MovieCard = ({ movie }) => {
     return (
         <article className={"movie-card"}>
-            <Link to={`/movie${movie.id}`} className={"movie-card__link"}>
+            <Link to={`/movie/${movie.id}`} className={"movie-card__link"}>
                 <img
                     src={movie.poster}
                     alt={movie.title}

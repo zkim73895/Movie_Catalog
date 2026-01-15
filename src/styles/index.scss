@@ -83,3 +83,36 @@ body {
     color: #666;
   }
 }
+
+.movie {
+  &__back {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: $primary-color;
+    text-decoration: none;
+  }
+
+  &__content {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__poster {
+    width: 300px;
+    border-radius: 8px;
+  }
+
+  &__info {
+    max-width: 600px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+}
