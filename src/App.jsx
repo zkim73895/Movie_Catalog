@@ -9,7 +9,7 @@ const App = () => {
     <BrowserRouter>
         <div className={"app"}>
             <header className={"app_header"}>
-                <h1 className={"app_title"}>Каталог фильмов</h1>
+                <h1 className={"app_title"}>Kinoreel</h1>
             </header>
 
             <main className={"app_content"}>
@@ -20,10 +20,6 @@ const App = () => {
                     </Routes>
                 </Suspense>
             </main>
-
-            <footer className={"app_footer"}>
-                <span>2026</span>
-            </footer>
         </div>
     </BrowserRouter>
   )

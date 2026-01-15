@@ -7,8 +7,12 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: Snell Roundhand, cursive;
+  background-color: $bg-main;
+  color: $text-main;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
 }
 
 .app {
@@ -17,7 +21,7 @@ body {
   flex-direction: column;
 
   &__header {
-    background-color: $primary-color;
+    background-color: $bg-main;
     color: #fff;
     padding: 16px;
   }
@@ -36,25 +40,27 @@ body {
 
 .home {
   &__title {
-    margin-bottom: 16px;
+    margin-bottom: 50px;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 16px;
+    font-family: 'Inter', Arial, sans-serif;
   }
 }
 
 .movie-card {
-  background-color: #fff;
+  background-color: $bg-secondary;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 16px rgb(204, 0, 0);
+    color: $accent;
   }
 
   &__link {
@@ -89,7 +95,7 @@ body {
   &__back {
     display: inline-block;
     margin-bottom: 16px;
-    color: $primary-color;
+    color: $text-muted;
     text-decoration: none;
   }
 
@@ -100,7 +106,7 @@ body {
   }
 
   &__poster {
-    width: 300px;
+    width: 30%;
     border-radius: 8px;
   }
 
@@ -120,13 +126,14 @@ body {
 
 .search {
   margin-bottom: 16px;
+  text-align: right;
 
   &__input {
     width: 100%;
     max-width: 300px;
     padding: 8px 12px;
     font-size: 14px;
-    border-radius: 6px;
+    border-radius: 80px;
     border: 1px solid #ccc;
   }
 }
