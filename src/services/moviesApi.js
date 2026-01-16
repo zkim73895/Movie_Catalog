@@ -14,11 +14,14 @@ export const getMovies = async () => {
 };
 
 export const getMoviesById = async (id) => {
-    const response = await fetch(`${API_URL}/${id}`)
-
-    if (!response.ok) {
-        throw new Error('Фильм не найден')
+    try {
+        const response = await fetch(`${API_URL}/movies/${id}`)
+        if (!response.ok) {
+            throw new Error('Фильм не найден')
+        }
+        return await response.json()
+    } catch (error) {
+        console.error(error)
+        throw new Error("Не удалось загрузить фильм. Проверьте соединение с сервером")
     }
-
-    return response.json()
-}
+};
