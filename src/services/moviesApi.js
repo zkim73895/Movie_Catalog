@@ -1,14 +1,17 @@
-const API_URL = 'http://localhost:3002/movies'
+const API_URL = import.meta.env.VITE_API_URL
 
 export const getMovies = async () => {
-    const response = await fetch(API_URL)
-
-    if (!response.ok) {
-        throw new Error('Ошибка загрузки')
+    try {
+        const response = await fetch(`${API_URL}/movies`);
+        if (!response.ok) {
+            throw new Error("Ошибка загрузки фильмов");
+        }
+        return await response.json()
+    } catch (error) {
+        console.error(error)
+        throw new Error("Не удалось загрузить. Проверьте соединение с сервером.")
     }
-
-    return response.json()
-}
+};
 
 export const getMoviesById = async (id) => {
     const response = await fetch(`${API_URL}/${id}`)

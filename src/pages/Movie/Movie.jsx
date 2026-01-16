@@ -20,7 +20,7 @@ const Movie = () => {
     if (error) return <p>{error}</p>
 
     return (
-        <section className={"movie"}>
+        <section className={"movie container"}>
             <Link to="/" className="movie__back">Назад</Link>
 
             <div className="movie__content">

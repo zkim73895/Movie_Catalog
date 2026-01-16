@@ -8,6 +8,7 @@ const MovieCard = ({ movie }) => {
                 <img
                     src={movie.poster}
                     alt={movie.title}
+                    loading="lazy"
                     className="movie-card__image"
                 />
 

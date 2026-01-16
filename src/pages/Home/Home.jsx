@@ -1,7 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
 import { getMovies } from "../../services/moviesApi.js";
-import MovieCard from '../../components/MovieCard/MovieCard'
+import MovieCard from '../../components/MovieCard/MovieCard';
 import Search from "../../components/Search/Search.jsx";
+import FeaturedMovies from "../Movie/FeaturedMovies.jsx";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMesage.jsx";
 
 const Home = () => {
     const [movies, setMovies] = useState([])
@@ -27,13 +29,13 @@ const Home = () => {
         setFilteredMovies(result)
     }, [movies])
 
-
-
     if (loading) return <p>Загрузка...</p>
-    if (error) return <p>{error}</p>
+    if (error) return <ErrorMessage message={error}/>
 
   return (
-    <section className="home">
+    <section className="home container">
+        <FeaturedMovies movies={movies} />
+
         <h2 className="home__title">Список фильмов</h2>
 
         <Search onSearch={handleSearch} />
