@@ -10,9 +10,6 @@ body {
   font-family: Snell Roundhand, cursive;
   background-color: $bg-main;
   color: $text-main;
-
-  font-size: 30px;
-  margin-top: 50px;
 }
 
 .app {
@@ -39,10 +36,24 @@ body {
 
   &_title {
     text-align: center;
+    font-size: 100px;
+    background:
+    radial-gradient(
+      circle at bottom,
+      rgba(229, 9, 20, 0.12),
+      transparent 65%
+    );
   }
 }
 
 .home {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(229, 9, 20, 0.12),
+      transparent 20%
+    );
+
   &__title {
     margin-bottom: 50px;
     text-align: center;
@@ -97,6 +108,13 @@ body {
 }
 
 .movie {
+    background:
+    radial-gradient(
+      circle at top,
+      rgba(229, 9, 20, 0.12),
+      transparent 50%
+    );
+
   &__back {
     display: inline-block;
     margin-bottom: 16px;
@@ -134,6 +152,10 @@ body {
     text-size-adjust: auto;
     font-size: 20px;
   }
+}
+
+.movie-title {
+  font-size: 35px;
 }
 
 .search {
